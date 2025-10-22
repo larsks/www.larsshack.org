@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/bundle.css" />
+</head>
+<body>
+  <div id="header">
+    <ul>
+      <li><a href="/">Home</a></li>
+    </ul>
+  </div>
+
+  <div id="title">
+    <h1>{{ title }}</h1>
+  </div>
+
+{% if make_toc %}
+  <div id="toc">
+    {{ content | toc }}
+  </div>
+{% endif %}
+
+  <div id="content">
+  {{ content }}
+  </div>
+
+  <div id="footer">
+    Copyright &copy; 2025 Lars Kellogg-Stedman | 
+    <a href="https://github.com/larsks/www.larsshack.org/blob/main/{{ page.inputPath }}?plain=1">View page source on github</a>
+  </div>
+</body>
+</html>
